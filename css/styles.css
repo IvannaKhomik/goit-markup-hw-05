@@ -145,13 +145,14 @@ ol {
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
-  transition: color var(--duration) var(--timing-function), fill var(--timing-duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function);
 }
 
 .header-link {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
+  transition: fill var(--timing-duration) var(--timing-function);
 }
 
 .header-link .icon {
@@ -314,7 +315,6 @@ ol {
 
   color: var(--secondary-text-color);
 }
-
 
 /* --------------WORKS SECTION-------------- */
 .works {
@@ -737,6 +737,8 @@ ol {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
 }
 
 .backdrop.is-hidden {
@@ -757,6 +759,11 @@ ol {
   background: var(--title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 500ms var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%,-50%) perspective(400px) rotateY(-90deg);
 }
 
 .modal-close {
