@@ -152,7 +152,7 @@ ol {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
-  transition: fill var(--timing-duration) var(--timing-function);
+  transition: fill var(--duration) var(--timing-function);
 }
 
 .header-link .icon {
@@ -578,14 +578,17 @@ ol {
 
   color: var(--title-color);
   background-color: rgba(33, 150, 243, 0.9);
-  
+
+  opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--duration) var(--timing-function);
+  transition: transform var(--duration) var(--timing-function),
+              opacity var(--duration) var(--timing-function);
 }
 
 .portfolio-link:hover .portfolio-overlay,
 .portfolio-link:focus .portfolio-overlay {
   transform: translateY(0);
+  opacity: 1;
 }
 
 /* --------------CLIENTS SECTION-------------- */
